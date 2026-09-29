@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Архівна публікація Zagrava Studios про п’ять складових хорошого ігрового рівня.">
+  <meta name="theme-color" content="#17152b">
+  <title>5 речей, без яких ти не зробиш класний ігровий рівень</title>
+  <style>
+    :root {
+      --ink: #17152b;
+      --muted: #676477;
+      --paper: #fffdf9;
+      --surface: #f4f0ff;
+      --pink: #ec4a82;
+      --purple: #6d51d9;
+      --cyan: #2bb9c5;
+      --line: rgba(23, 21, 43, .13);
+      --content: 780px;
+      --wide: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 85% 4%, rgba(109, 81, 217, .13), transparent 26rem),
+        var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 18px;
+      line-height: 1.72;
+      text-rendering: optimizeLegibility;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    strong { color: #2b2356; }
+    .progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      z-index: 20;
+      width: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--pink), var(--purple), var(--cyan));
+    }
+
+    .shell { width: min(calc(100% - 40px), var(--wide)); margin-inline: auto; }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-block: 24px;
+      font-size: 14px;
+      font-weight: 750;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .brand-mark {
+      width: 13px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--pink);
+      box-shadow: 16px 0 0 var(--purple), 32px 0 0 var(--cyan);
+      margin-right: 32px;
+    }
+    .archive-label { color: var(--muted); }
+
+    .hero { padding: clamp(48px, 9vw, 110px) 0 48px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--purple);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: currentColor; }
+    h1 {
+      max-width: 980px;
+      margin: 18px 0 28px;
+      font-size: clamp(44px, 7vw, 88px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      text-wrap: balance;
+    }
+    .dek {
+      max-width: 680px;
+      margin: 0 0 34px;
+      color: var(--muted);
+      font-size: clamp(19px, 2vw, 24px);
+      line-height: 1.45;
+    }
+    .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; color: var(--muted); font-size: 15px; }
+    .author { display: flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 700; }
+    .author img { width: 34px; height: 34px; object-fit: cover; border-radius: 50%; }
+    .dot { width: 4px; height: 4px; border-radius: 50%; background: #aaa4b9; }
+
+    .cover-wrap { width: min(calc(100% - 24px), 1320px); margin: 0 auto clamp(60px, 9vw, 110px); }
+    .cover {
+      width: 100%;
+      aspect-ratio: 1.95 / 1;
+      object-fit: cover;
+      border-radius: 28px;
+      box-shadow: 0 30px 90px rgba(44, 34, 80, .18);
+    }
+
+    .archive-note {
+      width: min(calc(100% - 40px), var(--content));
+      margin: 0 auto 58px;
+      padding: 20px 22px;
+      border: 1px solid rgba(109, 81, 217, .22);
+      border-radius: 16px;
+      background: rgba(244, 240, 255, .72);
+      color: #514d65;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .archive-note strong { color: var(--purple); }
+
+    .article { width: min(calc(100% - 40px), var(--content)); margin-inline: auto; }
+    .article h2 {
+      margin: 70px 0 20px;
+      font-size: clamp(29px, 4vw, 44px);
+      line-height: 1.15;
+      letter-spacing: -.035em;
+      text-wrap: balance;
+    }
+    .article p { margin: 0 0 24px; }
+    blockquote {
+      margin: 42px 0;
+      padding: 28px 30px 28px 34px;
+      border-left: 5px solid var(--pink);
+      border-radius: 0 18px 18px 0;
+      background: #fff0f5;
+      font-size: clamp(21px, 3vw, 28px);
+      font-weight: 650;
+      line-height: 1.42;
+      letter-spacing: -.018em;
+    }
+    blockquote p { margin: 0; }
+
+    .feature {
+      width: min(calc(100vw - 40px), 1080px);
+      margin: clamp(52px, 8vw, 86px) 50%;
+      transform: translateX(-50%);
+    }
+    .feature img { width: 100%; border-radius: 22px; box-shadow: 0 22px 60px rgba(44, 34, 80, .14); }
+    .feature figcaption { margin-top: 11px; color: var(--muted); font-size: 13px; text-align: right; }
+
+    .closing {
+      margin-top: 72px;
+      padding: clamp(35px, 6vw, 62px);
+      border-radius: 26px;
+      background: var(--ink);
+      color: white;
+    }
+    .closing h2 { margin-top: 0; color: white; }
+    .closing p:last-child { margin-bottom: 0; }
+    .closing strong { color: #f6a6c2; }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      width: min(calc(100% - 40px), var(--wide));
+      margin: 80px auto 0;
+      padding: 34px 0 62px;
+      border-top: 1px solid var(--line);
+    }
+    button, .top-link {
+      appearance: none;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: white;
+      padding: 11px 17px;
+      color: var(--ink);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 750;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .18s ease, border-color .18s ease;
+    }
+    button:hover, .top-link:hover { transform: translateY(-2px); border-color: var(--purple); }
+    .top-link { margin-left: auto; }
+
+    footer { padding: 0 0 50px; color: var(--muted); font-size: 13px; text-align: center; }
+
+    @media (max-width: 640px) {
+      body { font-size: 17px; }
+      .shell, .article, .archive-note { width: min(calc(100% - 28px), var(--wide)); }
+      .topbar { align-items: flex-start; }
+      .archive-label { max-width: 120px; text-align: right; line-height: 1.4; }
+      .hero { padding-top: 40px; }
+      h1 { font-size: clamp(41px, 14vw, 62px); }
+      .dot { display: none; }
+      .meta { align-items: flex-start; flex-direction: column; gap: 7px; }
+      .cover-wrap { width: calc(100% - 20px); }
+      .cover { min-height: 310px; border-radius: 20px; }
+      .feature { width: calc(100vw - 20px); }
+      .feature img { border-radius: 14px; }
+      blockquote { padding: 24px 22px; }
+      .top-link { margin-left: 0; }
+    }
+
+    @media print {
+      body { background: white; font-size: 11pt; }
+      .progress, .topbar, .archive-note, .actions { display: none; }
+      .hero { padding-top: 25px; }
+      h1 { font-size: 40pt; }
+      .cover-wrap { margin-bottom: 35px; }
+      .feature { width: 100%; margin: 30px 0; transform: none; break-inside: avoid; }
+      .article { width: 100%; max-width: 720px; }
+      .closing { background: #f2f2f2; color: var(--ink); }
+      footer { padding-top: 30px; }
+    }
+  </style>
+</head>
+<body id="top">
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="shell topbar">
+    <a class="brand" href="#top" aria-label="На початок статті"><span class="brand-mark" aria-hidden="true"></span>Zagrava Studios</a>
+    <span class="archive-label">Архівна публікація</span>
+  </header>
+
+  <main>
+    <section class="shell hero">
+      <span class="eyebrow">Level Design · Робота</span>
+      <h1>5 речей, без яких ти не зробиш класний ігровий рівень</h1>
+      <p class="dek">Про ідею, динаміку, маршрут, баланс і складність — п’ять опор, на яких тримається захопливий ігровий досвід.</p>
+      <div class="meta">
+        <span class="author"><img src="assets/avatar.jpg" alt="">Zagrava</span>
+        <span class="dot" aria-hidden="true"></span>
+        <time datetime="2026-04-03">3 квітня 2026</time>
+        <span class="dot" aria-hidden="true"></span>
+        <span>3 хвилини читання</span>
+      </div>
+    </section>
+
+    <div class="cover-wrap">
+      <img class="cover" src="assets/cover.jpg" width="1250" height="640" alt="Тетяна Гроголь за роботою над ігровим рівнем">
+    </div>
+
+    <aside class="archive-note">
+      <strong>Архівна копія.</strong> Сторінку відновлено зі збереженої версії для перегляду в портфоліо, оскільки оригінальна публікація більше не доступна онлайн. Текст, дата та візуальні матеріали збережені без зміни змісту.
+    </aside>
+
+    <article class="article">
+      <h2>Почнемо з основи: хто такий Level Designer?</h2>
+      <p><strong>Level Designer</strong> — це спеціаліст, який проєктує ігрові рівні так, щоб вони були зрозумілими, захопливими та мотивували гравця повертатися в гру знову і знову. Його завдання полягає не просто в тому, щоб розмістити механіки на полі, а в тому, щоб побудувати цілісний ігровий досвід.</p>
+
+      <blockquote><p>Хороший рівень має утримувати увагу гравця, поступово розкривати механіки, формувати відчуття прогресу й давати бажання пройти ще хоча б один рівень.</p></blockquote>
+
+      <p>Для цього Level Designer повинен враховувати багато факторів: цілі рівня, темп проходження, баланс ресурсів, складність і логіку взаємодії елементів між собою.</p>
+
+      <h2>То яким же має бути хороший ігровий рівень?</h2>
+      <p>Якщо говорити про ключові характеристики, то якісний ігровий рівень зазвичай має п’ять основних складових: <strong>ідею, динаміку, маршрут, баланс і складність</strong>.</p>
+
+      <figure class="feature">
+        <img src="assets/idea.jpg" width="1920" height="593" alt="Ідея — перша складова хорошого ігрового рівня">
+        <figcaption>01 · Ідея</figcaption>
+      </figure>
+
+      <p><strong>Кожен ігровий рівень повинен мати чітку ідею.</strong> Коли Level Designer отримує набір механік, його завдання — побудувати рівень так, щоб гравець розумів, які дії потрібно виконувати для досягнення результату, і водночас бачив логіку того, що відбувається на полі.</p>
+      <p>Створення рівня можна порівняти з написанням сценарію: у ньому не повинно бути зайвих елементів, які не працюють на загальну мету. Кожна механіка має виконувати свою функцію, розкриватися в процесі гри та впливати на перебіг подій.</p>
+      <p>Наприклад, якщо після активації елемент вибухає, цей вибух повинен не просто створювати ефект, а змінювати ситуацію на полі, відкривати нові можливості або наближати гравця до виконання цілі. <strong>У хорошому рівні кожна подія має сенс.</strong></p>
+
+      <figure class="feature">
+        <img src="assets/dynamics.jpg" width="1280" height="720" alt="Динаміка — друга складова хорошого ігрового рівня">
+        <figcaption>02 · Динаміка</figcaption>
+      </figure>
+
+      <p><strong>Рівень повинен бути динамічним.</strong> Це означає, що гравець має відчувати розвиток ситуації з кожним ходом. Якщо протягом тривалого часу на полі нічого суттєво не змінюється, інтерес до проходження швидко знижується.</p>
+      <p>Хороша динаміка створює відчуття руху вперед: гравець бачить результати своїх дій, розуміє, що просувається до фіналу, і відчуває зростання напруги ближче до завершення рівня. Саме це формує емоційне залучення та бажання спробувати ще раз, навіть у разі поразки.</p>
+      <p><strong>Якщо рівень побудований вдало, гравець після невдачі не відчуває безсилля</strong> — навпаки, у нього залишається відчуття, що до перемоги бракувало зовсім небагато.</p>
+
+      <figure class="feature">
+        <img src="assets/route.jpg" width="1920" height="593" alt="Маршрут — третя складова хорошого ігрового рівня">
+        <figcaption>03 · Маршрут</figcaption>
+      </figure>
+
+      <p>Ще одна важлива характеристика — <strong>наявність зрозумілого маршруту.</strong> Під час проходження рівня гравець має розуміти, у якому напрямку рухатися, які цілі є пріоритетними та які дії приведуть його до перемоги.</p>
+      <p>Коли в рівні немає чіткої логіки руху, з’являється <strong>фрустрація.</strong> Гравець починає діяти навмання, втрачає ресурс і не отримує задоволення від процесу. Саме тому важливо, щоб рівень інтуїтивно підказував послідовність дій.</p>
+      <p>Навіть якщо гравець програє, він повинен розуміти, що саме пішло не так: яку ціль не встиг виконати, який крок був неефективним і яку тактику варто спробувати наступного разу. Це дає відчуття контролю над ситуацією і підтримує інтерес до гри.</p>
+
+      <figure class="feature">
+        <img src="assets/balance.jpg" width="1920" height="593" alt="Баланс — четверта складова хорошого ігрового рівня">
+        <figcaption>04 · Баланс</figcaption>
+      </figure>
+
+      <p><strong>Баланс</strong> — одна з найскладніших частин роботи Level Designer. У більшості ігор гравець має обмежені ресурси: ходи, час, енергію або інші обмеження. Завдання дизайнера — побудувати рівень так, щоб ці ресурси витрачалися поступово й обґрунтовано.</p>
+      <p>Якщо гравець змушений витратити майже весь ресурс на одному етапі, решта рівня починає сприйматися як несправедлива або неможлива. У результаті негативний досвід переноситься не лише на конкретний рівень, а й на гру загалом.</p>
+      <p>Тому важливо, щоб кожна <strong>ділянка рівня мала адекватне навантаження</strong>, а складні моменти не руйнували загальну динаміку проходження. Добрий баланс створює відчуття виклику, але не безвиході.</p>
+
+      <figure class="feature">
+        <img src="assets/difficulty.jpg" width="1280" height="720" alt="Складність — п’ята складова хорошого ігрового рівня">
+        <figcaption>05 · Складність</figcaption>
+      </figure>
+
+      <p><strong>Складність — ключова характеристика будь-якого ігрового рівня.</strong> Саме вона визначає, наскільки довго гравець зберігатиме інтерес до гри.</p>
+      <p>Якщо рівні занадто прості, гравець швидко втрачає мотивацію, тому що перестає отримувати новий досвід і не відчуває інтелектуального виклику. Якщо ж рівні надто складні, гра починає викликати втому, роздратування і бажання припинити проходження.</p>
+      <p>Тому важливо не лише налаштовувати складність окремого рівня, а й правильно чергувати рівні між собою. Зміна темпу, нові комбінації механік, чергування простіших і складніших етапів допомагають підтримувати інтерес гравця в довгостроковій перспективі.</p>
+
+      <section class="closing">
+        <h2>Отже…</h2>
+        <p>Робота Level Designer — це поєднання аналітики, креативності та глибокого розуміння поведінки гравця.</p>
+      </section>
+
+      <figure class="feature">
+        <img src="assets/quote.jpg" width="1920" height="593" alt="Level Designer формує шлях гравця крізь гру">
+      </figure>
+
+      <p>Саме тому Level Designer не просто створює рівні — він формує шлях, яким гравець проходить крізь гру, і визначає, чи захоче той зробити ще одну спробу.</p>
+    </article>
+
+    <nav class="actions" aria-label="Дії зі статтею">
+      <button type="button" onclick="window.print()">Зберегти як PDF</button>
+      <button type="button" id="copyLink">Скопіювати посилання</button>
+      <a class="top-link" href="#top">Догори ↑</a>
+    </nav>
+  </main>
+
+  <footer class="shell">Архівна версія публікації Zagrava Studios · 2026</footer>
+
+  <script>
+    const bar = document.querySelector('.progress');
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      bar.style.width = (max > 0 ? scrollY / max * 100 : 0) + '%';
+    };
+    addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+
+    document.querySelector('#copyLink').addEventListener('click', async (event) => {
+      const button = event.currentTarget;
+      try {
+        await navigator.clipboard.writeText(location.href);
+        button.textContent = 'Посилання скопійовано';
+      } catch {
+        button.textContent = 'Скопіюй адресу браузера';
+      }
+      setTimeout(() => button.textContent = 'Скопіювати посилання', 2200);
+    });
+  </script>
+</body>
+</html>
